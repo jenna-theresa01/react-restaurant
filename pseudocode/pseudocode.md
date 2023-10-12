@@ -11,7 +11,7 @@
 
 [X] Install bootstrap and npm
 
-[] Access the API using Axios installed with npm
+[X] Access the API using Axios installed with npm
 
 [] Create a dynamic restaurant menu
 >> chose a specific menu section type to display (appetizers, Past, sandwiches, etc)
@@ -84,3 +84,20 @@ Organisms
 >> price
 >> spice level
 >>> category will be defined where the dish will be placed within the menu: breakfast, dinner, etc
+
+###### what are the connections between each component page and how will I refer back to them on page.js?
+
+> start on page.js and import MyTitle.js to page and export MyTitle
+>> write functions on my title file to create the the title at the top of the page
+>>> what else goes in MyTitle? 
+>>>> I want to be able to set state with the title: making it a link to the landing screen
+
+> then connect page.js to new file called NavBar.js by importing and exporting correct file names
+>> create and write functions in NavBar file 
+>>> I want 3 items in NavBar: about, menu, and contact
+>>>> I would like each nav location to be linked to another page. the menu nav will be linked to landing page
+>> create a dropdown with the menu nav to be able to refer to the appropriate subsection within the menu
+
+
+> i want to create a "card file" that will be the holder of all the food items that I want to add to my menu
+> 
