@@ -227,3 +227,10 @@
     transform: rotate(0deg);
   }
 }
+
+.MyTitle {
+  justify-content: center;
+  font-family: serif;
+  
+
+}
