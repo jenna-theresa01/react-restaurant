@@ -1,10 +1,13 @@
 "use client"
 import React, { useState } from 'react'
-import styles from './page.module.css'
+// import styles from './page.module.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import MyTitle from '../components/organisms/MyTitle'
+import NavBar from '../components/molecules/NavBar'
+// import BackgroundImg from '../components/atoms/background-img'
+
 
 
 export default function Home() {
@@ -18,8 +21,16 @@ async function callAxios() {
 callAxios()
 
   return (
-    <main className={styles.main}>
-     <MyTitle />
+    <main style={{
+      backgroundImage: "url('/img/background-restaurant-image.jpeg')",
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+
+    }}>
+      <div>
+        <MyTitle className="MyTitle" />
+        <NavBar />
+      </div>
     </main>
     
     
