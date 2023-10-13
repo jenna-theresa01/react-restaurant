@@ -1,8 +1,12 @@
 export default function MenuCard() {
 
 return(
-    <div className="card">
-        
+    <div>
+        <div>Breakfast</div>
+            <MenuCard 
+                className="card"
+                
+            />
     </div>
 )
 

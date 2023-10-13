@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import style from './page.module.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -13,13 +13,17 @@ import Landing from '../components/molecules/landing-page'
 const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
 
 export default function Home() {
-  const [state, setState] = React.useState();
+  const [state, setState] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(apiUrl).then((response) => {
-      setState(response.data);
+    axios.get(apiUrl)
+      .then((response) => {
+        setState(response.data);
+    })
+    .catch((error) => {
+   
+    console.error('Error fetch data', error)
     });
-    console.log()
   }, []);
 
 
