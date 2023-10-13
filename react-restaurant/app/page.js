@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import MyTitle from '../components/organisms/MyTitle'
 import NavBar from '../components/molecules/NavBar'
 import Landing from '../components/molecules/landing-page'
+import ContactPage from '../components/organisms/contactPage'
 // import BackgroundImg from '../components/atoms/background-img'
 
 
@@ -32,7 +33,8 @@ export default function Home() {
       backgroundImage: "url('/img/background-restaurant-image.jpeg')",
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: "200vh",
+      height: "100vh",
+      width: "100vw",
       backgroundBlendMode: '25%',
   }}>
     
@@ -41,6 +43,7 @@ export default function Home() {
         <NavBar />
         <Landing />
         <p>{}</p>
+        <ContactPage />
       </div>
       
     </main>
