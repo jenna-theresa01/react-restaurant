@@ -7,7 +7,8 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import MyTitle from '../components/organisms/MyTitle'
 import NavBar from '../components/molecules/NavBar'
 import Landing from '../components/molecules/landing-page'
-// import BackgroundImg from '../components/atoms/background-img'
+import ContactPage from '../components/organisms/contactPage'
+
 
 
 const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
@@ -41,6 +42,7 @@ export default function Home() {
         <NavBar />
         <Landing />
         <p>{}</p>
+        <ContactPage />
       </div>
       
     </main>
