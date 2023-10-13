@@ -14,10 +14,10 @@
 [X] Access the API using Axios installed with npm
 
 [] Create a dynamic restaurant menu
->> chose a specific menu section type to display (appetizers, Past, sandwiches, etc)
->> Dynamically render at least 15 menu items
->> the menu section you decide to display should have its own view as an organism (for example, a bootstrap accordion or nav tabs)
->> each menu item must be a molecule (for example, using a bootstrap card or list item with the name, and the price, etc)
+>> [] chose a specific menu section type to display (appetizers, Past, sandwiches, etc)
+>> [] Dynamically render at least 15 menu items
+>> [] the menu section you decide to display should have its own view as an organism (for example, a bootstrap accordion or nav tabs)
+>> [] each menu item must be a molecule (for example, using a bootstrap card or list item with the name, and the price, etc)
 
 [] Manage the React Component State
 

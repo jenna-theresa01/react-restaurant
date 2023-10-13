@@ -7,8 +7,8 @@ export default function MyTitle () {
         <h1>Books & Bites</h1>
         <Image
         src="/img/open-book.png"
-        width={50}
-        height={50}
+        width={100}
+        height={100}
         alt="Open book"
         />
      </div>
