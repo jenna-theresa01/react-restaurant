@@ -8,7 +8,8 @@ import MyTitle from '../components/organisms/MyTitle'
 import NavBar from '../components/molecules/NavBar'
 import Landing from '../components/molecules/landing-page'
 import ContactPage from '../components/organisms/contactPage'
-// import BackgroundImg from '../components/atoms/background-img'
+import AboutPage from '../components/organisms/about'
+
 
 
 const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
@@ -44,6 +45,7 @@ export default function Home() {
         <Landing />
         <p>{}</p>
         <ContactPage />
+        <AboutPage />
       </div>
       
     </main>
