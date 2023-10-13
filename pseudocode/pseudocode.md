@@ -4,10 +4,10 @@
 
 [X] make some wireframes for the website design (include them as photos in repo)
 
-[] Generate the following information
->> [] the restaurant's name
->> [] the restaurant's address
->> [] the restaurant's hours of operations 
+[X] Generate the following information
+>> [X] the restaurant's name
+>> [X] the restaurant's address
+>> [X] the restaurant's hours of operations 
 
 [X] Install bootstrap and npm
 

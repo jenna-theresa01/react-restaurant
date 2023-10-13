@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import style from './page.module.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -7,19 +7,25 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import MyTitle from '../components/organisms/MyTitle'
 import NavBar from '../components/molecules/NavBar'
 import Landing from '../components/molecules/landing-page'
-// import BackgroundImg from '../components/atoms/background-img'
+import ContactPage from '../components/organisms/contactPage'
+import AboutPage from '../components/organisms/about'
+
 
 
 const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
 
 export default function Home() {
-  const [state, setState] = React.useState();
+  const [state, setState] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(apiUrl).then((response) => {
-      setState(response.data);
+    axios.get(apiUrl)
+      .then((response) => {
+        setState(response.data);
+    })
+    .catch((error) => {
+   
+    console.error('Error fetch data', error)
     });
-    console.log()
   }, []);
 
 
@@ -29,14 +35,18 @@ export default function Home() {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       height: "200vh",
+      width: "100vw",
       backgroundBlendMode: '25%',
   }}>
-    
-      <div>
+    <div>
         <MyTitle className="MyTitle" />
         <NavBar />
+    </div>
+      <div>
+        
         <Landing />
-        <p>{}</p>
+        <ContactPage />
+        <AboutPage />
       </div>
       
     </main>
