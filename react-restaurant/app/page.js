@@ -44,11 +44,14 @@ export default function Home() {
       width: '100vw',
       // opacity: '25%',
   }}>
-    
-      <div>
+    <div>
         <MyTitle className="MyTitle" />
         <NavBar />
+    </div>
+      <div>
+        
         <Landing />
+
         <p>{}</p>
         {data && <MenuCard data={data} />}
         {/* {menuMap} */}
