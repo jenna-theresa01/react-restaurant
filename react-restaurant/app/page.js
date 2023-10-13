@@ -9,24 +9,30 @@ import NavBar from '../components/molecules/NavBar'
 import Landing from '../components/molecules/landing-page'
 import ContactPage from '../components/organisms/contactPage'
 import AboutPage from '../components/organisms/about'
+import MenuCard from '../components/molecules/menuCard'
 
-
-
-const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
 
 export default function Home() {
-  const [state, setState] = React.useState(null);
+  const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
+  const [data, setData] = useState(null);
+  // const [menuMap, setMenuMap] = useState();
 
-  React.useEffect(() => {
+  let menuMap;
+
+  useEffect(() => {
     axios.get(apiUrl)
       .then((response) => {
-        setState(response.data);
+        console.log(response.data)
+        setData(response.data);
     })
     .catch((error) => {
    
     console.error('Error fetch data', error)
     });
+    console.log(data)
   }, []);
+
+
 
 
   return (
@@ -36,7 +42,7 @@ export default function Home() {
       backgroundSize: 'cover',
       height: "100vh",
       width: '100vw',
-      backgroundBlendMode: '25%',
+      // opacity: '25%',
   }}>
     
       <div>
@@ -44,8 +50,10 @@ export default function Home() {
         <NavBar />
         <Landing />
         <p>{}</p>
-        <ContactPage />
+        {data && <MenuCard data={data} />}
+        {/* {menuMap} */}
         <AboutPage />
+        <ContactPage />
       </div>
       
     </main>
