@@ -34,16 +34,17 @@ export default function Home() {
       backgroundImage: "url('/img/background-restaurant-image.jpeg')",
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: "100vh",
+      height: "200vh",
       width: "100vw",
       backgroundBlendMode: '25%',
   }}>
-    
-      <div>
+    <div>
         <MyTitle className="MyTitle" />
         <NavBar />
+    </div>
+      <div>
+        
         <Landing />
-        <p>{}</p>
         <ContactPage />
         <AboutPage />
       </div>
