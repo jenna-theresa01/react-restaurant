@@ -1,7 +1,11 @@
 export default function NavBar() {
 
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary"
+        style={{
+            justifyContent: "space-between",
+            flexDirection: "row",
+            }}>
         <ul className="navbar-nav">
             <li className="nav-item">
             <a className="nav-link" href="/about">About</a>
