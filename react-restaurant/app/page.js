@@ -14,36 +14,33 @@ import MenuCard from '../components/molecules/menuCard'
 
 export default function Home() {
   const apiUrl = "https://www.jsonkeeper.com/b/MDXW"
-  const [data, setData] = useState(null);
+  const [potato, setPotato] = useState(null);
   // const [menuMap, setMenuMap] = useState();
 
-  let menuMap;
+  // let menuMap;
 
   useEffect(() => {
     axios.get(apiUrl)
       .then((response) => {
-        console.log(response.data)
-        setData(response.data);
+        console.log(response.data) 
+        setPotato(response.data);
     })
-    .catch((error) => {
-   
-    console.error('Error fetch data', error)
-    });
-    console.log(data)
+    
+    console.log(potato)
   }, []);
 
 
 
 
   return (
-    <main style={{
-      backgroundImage: "url('/img/background-restaurant-image.jpeg')",
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      height: "100vh",
-      width: '100vw',
+     <main // style={{
+    //   backgroundImage: "url('/img/background-restaurant-image.jpeg')",
+    //   backgroundRepeat: 'no-repeat',
+    //   backgroundSize: 'cover',
+    //   height: "100vh",
+    //   width: '100vw',
       // opacity: '25%',
-  }}>
+   >
     <div>
         <MyTitle className="MyTitle" />
         <NavBar />
@@ -52,8 +49,7 @@ export default function Home() {
         
         <Landing />
 
-        <p>{}</p>
-        {data && <MenuCard data={data} />}
+        {/* {data && <MenuCard data={data} />} */}
         {/* {menuMap} */}
         <AboutPage />
         <ContactPage />

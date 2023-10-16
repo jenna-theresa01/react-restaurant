@@ -1,4 +1,4 @@
-'use client'
+
 export default function MenuCard(props) {
 
 // const listItems = props.data.map(data => <li>{id}</li>)
@@ -9,7 +9,7 @@ const dataMap = props.data.map((el) => {
     return (
     <div>
     <div>{el.title}</div>
-        <listIems 
+        <listItems 
             // className="card"
             // category={props.listItems.category}
             // title={props.listItems.title}
@@ -29,3 +29,4 @@ return(
 );
 
 }
+// conditional statement
